@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emiliano Alcalde | Consultor Financiero y BI</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Lucide Icons (Íconos) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Configuración de la fuente Inter y estilos base */
+        :root {
+            --color-primary: #001F3F; /* Azul Marino Oscuro */
+            --color-accent: #DAA520; /* Dorado/Cobre */
+            --color-text: #333333; /* Gris Carbón */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            background-color: #f5f5f5; /* Gris Claro para el fondo */
+            line-height: 1.6;
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .bg-accent { background-color: var(--color-accent); }
+        .text-accent { color: var(--color-accent); }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 4px;
+            background-color: var(--color-accent);
+            border-radius: 9999px;
+        }
+        .shadow-cobre {
+            box-shadow: 0 4px 6px -1px rgba(218, 165, 32, 0.2), 0 2px 4px -2px rgba(218, 165, 32, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN (Sticky Header) -->
+    <header class="bg-primary shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white tracking-wider">E. Alcalde</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="text-white hover:text-accent transition duration-300">Inicio</a>
+                <a href="#sobre-mi" class="text-white hover:text-accent transition duration-300">Sobre Mí</a>
+                <a href="#servicios" class="text-white hover:text-accent transition duration-300">Servicios</a>
+                <a href="#contacto" class="text-accent border-2 border-accent px-3 py-1 rounded-lg hover:bg-accent hover:text-primary transition duration-300">Contacto</a>
+            </nav>
+            <!-- Botón de menú para móvil -->
+            <button class="md:hidden text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-primary">
+            <a href="#inicio" class="block text-white hover:text-accent transition duration-300">Inicio</a>
+            <a href="#sobre-mi" class="block text-white hover:text-accent transition duration-300">Sobre Mí</a>
+            <a href="#servicios" class="block text-white hover:text-accent transition duration-300">Servicios</a>
+            <a href="#contacto" class="block text-accent border-2 border-accent px-3 py-1 rounded-lg hover:bg-accent hover:text-primary transition duration-300 text-center">Contacto</a>
+        </div>
+    </header>
+
+    <!-- 1. SECCIÓN: INICIO (HERO SECTION) -->
+    <section id="inicio" class="py-20 md:py-32 bg-gray-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-primary mb-4">
+                Emiliano Alcalde
+            </h1>
+            <h2 class="text-xl md:text-3xl font-light text-gray-700 max-w-4xl mx-auto mb-8">
+                Contador Público especializado en **Finanzas Corporativas**, **Reporting** y **Business Intelligence**.
+            </h2>
+            <a href="#servicios" class="inline-block bg-accent text-primary font-bold py-3 px-8 rounded-full shadow-lg shadow-cobre hover:bg-primary hover:text-white transition duration-500 transform hover:scale-105">
+                Conoce mis Servicios
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. SECCIÓN: SOBRE MÍ -->
+    <section id="sobre-mi" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="section-title text-3xl text-primary mx-auto md:ml-0 text-center md:text-left mb-12">Mi Perfil</h3>
+
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <!-- Foto de Diego Maradona (a solicitud del usuario) -->
+                <div class="w-48 h-48 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 border-4 border-accent shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/400x400/001F3F/FFFFFF?text=DIEGO+MARADONA+10" alt="Foto de Diego Maradona" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                </div>
+
+                <!-- Texto -->
+                <div class="text-lg space-y-4">
+                    <p>Soy Contador Público Nacional, graduado de la Universidad Nacional de Cuyo, con una sólida trayectoria en análisis financiero y contable. Mi experiencia profesional incluye roles clave en empresas multinacionales como **Hitachi Ltd**, **Cepsa S.A.** y **NTT Data** en Madrid, España, así como en **EDEMSA S.A.** en Argentina.</p>
+
+                    <p>Mi especialidad es transformar datos complejos en información clara y accionable para la toma de decisiones. Combino mi rigurosa experiencia contable con un dominio avanzado de herramientas de Business Intelligence como **Power BI**, **Looker Studio** y consultas en **SQL**. Además, poseo un profundo conocimiento en sistemas ERP líderes como **SAP R3** y **SAP S/4HANA**.</p>
+
+                    <p>Con un nivel de Inglés B2, he actuado como interlocutor directo con equipos globales en entornos corporativos. Mi formación continua incluye certificaciones de prestigio internacional en Finanzas Corporativas (IAE), Accounting Analytics (Wharton), Liderazgo (IESE) y Análisis Organizacional (Stanford).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN: MIS SERVICIOS -->
+    <section id="servicios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="section-title text-3xl text-primary mx-auto md:ml-0 text-center mb-12">Servicios de Consultoría</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Servicio 1: Controlling Financiero -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-accent transition duration-500 hover:shadow-2xl">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="bar-chart-3" class="text-accent w-8 h-8 mr-3"></i>
+                        <h4 class="text-xl font-semibold text-primary">Controlling Financiero y Reporting Estratégico</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Ideal para empresas que necesitan claridad y precisión en su planificación financiera.</p>
+                    <ul class="list-none space-y-2 text-sm">
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Elaboración y seguimiento de **Presupuesto (Budget) y Forecast**.</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Análisis de **desviaciones** (presupuestarias y del área).</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Armado y reporting de **resultados financieros mensuales**.</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Análisis de **proyectos de inversión**.</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2: Business Intelligence -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-accent transition duration-500 hover:shadow-2xl">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="layout-dashboard" class="text-accent w-8 h-8 mr-3"></i>
+                        <h4 class="text-xl font-semibold text-primary">Business Intelligence y Análisis de Datos</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Transformo tus datos contables en paneles visuales para una toma de decisiones inteligente.</p>
+                    <ul class="list-none space-y-2 text-sm">
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Diseño y desarrollo de **Dashboards y Cuadros de Mando**.</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Reportes interactivos en **Power BI** y **Looker Studio**.</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Extracción y análisis de datos mediante consultas en **SQL**.</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Automatización de reportes de cierre.</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 3: Contabilidad Corporativa -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-accent transition duration-500 hover:shadow-2xl">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="notebook-pen" class="text-accent w-8 h-8 mr-3"></i>
+                        <h4 class="text-xl font-semibold text-primary">Contabilidad Corporativa y Cierres</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Garantizo la integridad y puntualidad de tu información contable y financiera.</p>
+                    <ul class="list-none space-y-2 text-sm">
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Gestión del **ciclo contable completo** (Full Cycle Accounting).</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Preparación de **Estados Financieros** (bajo IFRS).</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Tareas de **cierres de balances** mensuales y anuales.</li>
+                        <li class="flex items-start"><i data-lucide="check-circle" class="text-primary w-4 h-4 mt-1 mr-2 flex-shrink-0"></i> Soporte y atención de **auditorías**.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN: TECNOLOGÍA Y FORMACIÓN -->
+    <section id="tecnologia" class="py-16 md:py-24 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="section-title text-3xl text-accent mx-auto md:ml-0 text-center mb-12">Expertise y Tecnología</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Columna 1: Herramientas -->
+                <div>
+                    <h4 class="text-2xl font-semibold mb-4 text-accent flex items-center"><i data-lucide="settings" class="w-6 h-6 mr-3"></i> Herramientas de Gestión</h4>
+                    <p class="mb-4">Domino los sistemas que garantizan la precisión y eficiencia de tus procesos contables y de reporting.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">SAP S/4HANA</span>
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">SAP R3</span>
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">One Stream</span>
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">Power BI</span>
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">Looker Studio</span>
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">SQL</span>
+                        <span class="bg-white text-primary px-4 py-2 rounded-full font-medium shadow-lg">MS Excel Avanzado</span>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Formación -->
+                <div>
+                    <h4 class="text-2xl font-semibold mb-4 text-accent flex items-center"><i data-lucide="graduation-cap" class="w-6 h-6 mr-3"></i> Formación y Certificaciones</h4>
+                    <ul class="list-disc list-inside space-y-2 text-lg marker:text-accent">
+                        <li>**Contador Público Nacional** | Universidad Nacional de Cuyo</li>
+                        <li>**Finanzas Corporativas** | IAE, Universidad Austral</li>
+                        <li>**Accounting Analytics** | Wharton, University of Pennsylvania</li>
+                        <li>**Organizational Analysis** | Stanford University</li>
+                        <li>**Data Analytics (SQL/Power BI)** | Coderhouse</li>
+                        <li>**Inglés Nivel B2** (Oral y Escrito)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN: CONTACTO -->
+    <section id="contacto" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="section-title text-3xl text-primary mx-auto md:ml-0 text-center mb-12">Trabajemos Juntos</h3>
+
+            <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-xl border border-gray-100">
+                <p class="text-lg text-center mb-8">Estoy listo para analizar tus procesos, optimizar tu reporting y ayudarte a tomar mejores decisiones basadas en datos.</p>
+
+                <div class="flex flex-col md:flex-row justify-around mb-8 space-y-4 md:space-y-0">
+                    <div class="text-center">
+                        <i data-lucide="mail" class="text-primary w-8 h-8 mx-auto mb-2"></i>
+                        <span class="block font-semibold">Email:</span>
+                        <a href="mailto:emilianoalcalde.95@gmail.com" class="text-primary hover:text-accent transition duration-300">emilianoalcalde.95@gmail.com</a>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="phone" class="text-primary w-8 h-8 mx-auto mb-2"></i>
+                        <span class="block font-semibold">Teléfono:</span>
+                        <a href="tel:+2615910680" class="text-primary hover:text-accent transition duration-300">+261 591 0680</a>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="map-pin" class="text-primary w-8 h-8 mx-auto mb-2"></i>
+                        <span class="block font-semibold">Ubicación:</span>
+                        <span class="text-gray-700">Mendoza, Argentina (Proyectos Globales)</span>
+                    </div>
+                </div>
+
+                <!-- Formulario Simple (Placeholder) -->
+                <form class="space-y-4 pt-6 border-t border-gray-200">
+                    <div>
+                        <input type="text" placeholder="Tu Nombre Completo" required class="w-full p-3 border border-gray-300 rounded-lg focus:border-accent focus:ring focus:ring-accent/50 outline-none">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Tu Email de Contacto" required class="w-full p-3 border border-gray-300 rounded-lg focus:border-accent focus:ring focus:ring-accent/50 outline-none">
+                    </div>
+                    <div>
+                        <textarea placeholder="Cuéntame sobre tu proyecto o consulta..." rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:border-accent focus:ring focus:ring-accent/50 outline-none resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-accent text-primary font-bold py-3 rounded-lg shadow-cobre hover:bg-primary hover:text-white transition duration-500 transform hover:scale-[1.01]">
+                        Enviar Consulta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white/80">
+            <p>&copy; 2025 Emiliano Alcalde. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Consultoría en Finanzas Corporativas, Reporting y Business Intelligence.</p>
+        </div>
+    </footer>
+
+    <!-- Inicializar Íconos de Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
